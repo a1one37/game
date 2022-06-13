@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOVA LOX</title>
+</head>
+
+<body>
+    
+    <script>
+        let randomValue = Math.floor(Math.random() * 101);
+        let attempt = 0;
+        alert("Я загадал случайное значение от 0 до 100, попробуй угадать, бездарь");
+
+        while (true) {
+            attempt++;
+            let currentValue = prompt("Попробуйте угадать число, бездарь. Введи значение");
+if(currentValue == null){
+    alert("Кто тебе разрешал ливать, вернись обратно, клоун. Перезагрузи страничку нахуй.")
+    break
+}
+            if (currentValue == "стоп") {
+                break;
+            }
+           
+            if (currentValue > randomValue) {
+                alert(`Я загадал значение меньше чем ${currentValue}`);
+            }
+            else if (currentValue < randomValue) {
+                alert(`Я загадал значение больше чем ${currentValue}`);
+            }
+            if (currentValue == randomValue) {
+                alert(`Правильно. Вы угадали с ${attempt}й попытки. `);
+                break;
+            }
+            
+        } 
+        if(attempt<7){
+                alert('Ну нихуя ж себе, проебал удачу на следущие 10 лет')
+            }
+            if(attempt >= 7 && attempt <10){
+                alert('мог бы получше, но так тоже норм')
+            }
+            if(attempt >= 10){
+                alert('бля, ты фулл бездарность, как можно было так долго. Я вахуи')
+            }
+    </script>
+</body>
+
+</html>
